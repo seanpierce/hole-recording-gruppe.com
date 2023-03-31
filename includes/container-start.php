@@ -9,7 +9,7 @@
 
     <title>Hole Recording Gruppe</title>
 
-    <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>

@@ -21,10 +21,10 @@
 
     <div class="flex-wrap">
         <div class="img-wrapper-half">
-            <img class="outline" src="assets/images/sean pierce - sackerl - square front.png" alt="Album art for Sean Pierce - Sackerl">
+            <img class="outline" src="releases/hrg001/sean pierce - sackerl - square front.png" alt="Album art for Sean Pierce - Sackerl">
         </div>
         <div class="img-wrapper-half">
-            <img class="outline square" src="assets/images/HRG001-CASS album cover.png" alt="Cassette layout for Sean Pierce - Sackerl">
+            <img class="outline square" src="releases/hrg001/HRG001-CASS album cover.png" alt="Cassette layout for Sean Pierce - Sackerl">
         </div>
     </div>
 </div>

@@ -2,6 +2,8 @@
 
 Hole Recording Gruppe is a United States-based record label that releases experimental music.
 
-hole-recording-gruppe.com
+https://hole-recording-gruppe.com
+
+hole.recording.gruppe@gmail.com
 
 <img src="assets/images/logo.png" />
