@@ -8,7 +8,7 @@
 
     <p>Pre-order the digital and cassette releases on <a href="https://hole-recording-gruppe.bandcamp.com/album/sean-pierce-sackerl" target="_blank">bandcamp</a>.</p>
 
-    <iframe style="border: 0; width: 700px; height: 307px;" src="https://bandcamp.com/EmbeddedPlayer/album=3262620965/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://hole-recording-gruppe.bandcamp.com/album/sean-pierce-sackerl">Sean Pierce - Sackerl</a></iframe>
+    <iframe style="border: 0; width: 100%; height: 307px;" src="https://bandcamp.com/EmbeddedPlayer/album=3262620965/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://hole-recording-gruppe.bandcamp.com/album/sean-pierce-sackerl">Sean Pierce - Sackerl</a></iframe>
 
     <div class="flex-wrap">
         <div class="img-wrapper-half">
