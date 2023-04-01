@@ -7,6 +7,17 @@
     <meta name="description" content="Hole Recording Gruppe is a United States-based record label that releases experimental music." />
 	<meta name="keywords" content="Hole Recording Gruppe group hrg Portland Oregon United States experimental electronic music" />
 
+    <!-- og card data -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Hole Recording Gruppe" />
+    <meta property="og:description" content="Hole Recording Gruppe is a United States-based record label that releases experimental music." />
+    <meta property="og:url" content="https://hole-recording-gruppe.com" />
+    <meta property="og:image" content="https://hole-recording-gruppe.com/assets/images/og-hole-recording-gruppe-fan.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:alt" content="Hole Recording Gruppe logo with partially transparent fan." />
+
     <title>Hole Recording Gruppe</title>
 
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
