@@ -15,4 +15,4 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-                    bash deploy_hrg.sh
+                    echo "${{ secrets.SSH_PASSWORD }}" | sudo -S bash deploy_hrg.sh
