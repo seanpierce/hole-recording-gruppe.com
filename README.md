@@ -6,4 +6,4 @@ https://hole-recording-gruppe.com
 
 hole.recording.gruppe@gmail.com
 
-<img src="assets/images/logo.png" />
+<img src="assets/images/og-hole-recording-gruppe-fan.png" />
