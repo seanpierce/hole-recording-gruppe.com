@@ -5,7 +5,7 @@
     <p><a href="https://seanpierce.net" target="_blank">Sean Pierce</a> brings us Sackerl for HRG001, which was composed and recorded in his shed, early Spring, 2023. This set was originally performed at Musique Plastique in Portland, Oregon, as part of the first Lonely God festival and reproduced for another performance at Mississippi Records the following week.</p>
     <p>Cover artwork by Arthur Robbins (age 3). Layout and design by Hole Recording Gruppe. Mastered at The S'hole, Portland, Oregon. Released April 10, 2023.</p>
 
-    <p>Pre-order the digital and cassette releases on <a href="https://hole-recording-gruppe.bandcamp.com/album/sean-pierce-sackerl" target="_blank">bandcamp</a>.</p>
+    <p>Purchase the digital and cassette releases on <a href="https://hole-recording-gruppe.bandcamp.com/album/sean-pierce-sackerl" target="_blank">bandcamp</a>, or email hole.recording.gruppe@gmail.com.</p>
 
     <iframe style="border: 0; width: 100%; height: 307px;" src="https://bandcamp.com/EmbeddedPlayer/album=3262620965/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" seamless><a href="https://hole-recording-gruppe.bandcamp.com/album/sean-pierce-sackerl">Sean Pierce - Sackerl</a></iframe>
 
