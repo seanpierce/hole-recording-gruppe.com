@@ -1,0 +1,109 @@
+$maize: white; //#FCE762;
+$dark-grey: #333;
+$break-point: 770px;
+
+html {
+    font-family: monospace;
+    color: $dark-grey;
+}
+
+body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $maize;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    font-size: 16px;
+
+    @media (max-width: $break-point) {
+        width: 96%;
+    }
+
+    #header {
+        width: 100%;
+
+        a#sneaky-link {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            height: 100px;
+            
+        }
+
+        img {
+            &#hrg-logo {
+                width: 100%;
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+
+    h1 {
+        color: $dark-grey;
+    }
+
+    #footer {
+        display: block;
+        margin: 100px auto;
+        padding-bottom: 100px;
+
+        #tape {
+            width: 100%;
+        }
+    }
+}
+
+#release {
+    .media {
+        display: flex;
+        justify-content: space-between;
+        margin: 24px auto;
+
+        @media (max-width: $break-point) {
+            display: block;
+        }
+
+        img {
+            width: 58%;
+
+            @media (max-width: $break-point) {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        .iframe-wrapper {
+            width: 40%;
+
+            @media (max-width: $break-point) {
+                display: block;
+                width: 100%;
+                margin-top: 24px;
+            }
+        }
+    }
+
+    .content {
+        margin: 48px auto;
+
+        @media (max-width: $break-point) {
+            margin-top: 24px;
+        }
+    }
+}
