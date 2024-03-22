@@ -16,11 +16,21 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+from django.conf.urls.static import static
 
 from hole_recording_gruppe import settings, views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('releases/<str:catalog>', views.release, name='release'),
+     path('ckeditor5/', include('django_ckeditor_5.urls'))
 ]
+
+urlpatterns += [
+    path("ckeditor5/", include('django_ckeditor_5.urls'), name="ck_editor_5_upload_file"),
+] + static(settings.UPLOADS_URL, document_root=settings.UPLOADS_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

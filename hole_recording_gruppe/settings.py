@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 import os
 from pathlib import Path
+from .ckeditor_settings import config as CKEDITOR_5_CONFIGS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'releases',
+    'django_ckeditor_5',
 ]
 
 MIDDLEWARE = [
@@ -119,8 +122,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/assets/'
-
+UPLOADS_URL = '/uploads/'
 STATICFILES_DIRS = [ os.path.join(BASE_DIR,'assets') ]
+UPLOADS_ROOT = os.path.join(BASE_DIR, 'uploads')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
