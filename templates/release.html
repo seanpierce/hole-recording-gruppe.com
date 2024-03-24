@@ -1,27 +1,25 @@
 {% extends 'layouts/_layout.html' %}
 
 {% block content %}
-<div id="content">
-    <h1>{{ catalog }}</h1>
+<h1>{{ catalog }}</h1>
 
-    <div id="release">
-        <h1>{{ release }}</h1>
-        <div>
-            <strong>{{ release.release_date }}</strong>
-        </div>
-    
-        <div class="content">
-            {{ release.info | safe }}
-        </div>
-    
-        <div class="media">
-            {% for image in release.releaseimage_set.all %}
-            <img src="{{ image.image.url }}" alt="">
-            {% endfor %}
+<div id="release">
+    <h1>{{ release }}</h1>
+    <div>
+        <strong>{{ release.release_date }}</strong>
+    </div>
 
-            <div class="iframe-wrapper">
-                {{ release.bandcamp_embed | safe }}
-            </div>
+    <div class="content">
+        {{ release.info | safe }}
+    </div>
+
+    <div class="media">
+        {% for image in release.releaseimage_set.all %}
+        <img src="{{ image.image.url }}" alt="">
+        {% endfor %}
+
+        <div class="iframe-wrapper">
+            {{ release.bandcamp_embed | safe }}
         </div>
     </div>
 </div>

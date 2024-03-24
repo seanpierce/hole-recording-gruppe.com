@@ -5,11 +5,17 @@
 
 <body>
     <div id="container">
-        {% include 'layouts/header.html' %}
+        <div id="header">
+            {% include 'layouts/header.html' %}
+        </div>
 
-        {% block content %}{% endblock %}
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
 
-        {% include 'layouts/footer.html' %}
+        <div id="footer">
+            {% include 'layouts/footer.html' %}
+        </div>
     </div>
 </body>
 
