@@ -1,10 +1,13 @@
-from .models import Release, ReleaseImage
+from .models import Release
 
 def get_releases():
     releases = Release.objects.all()
     return releases
 
 
-def get_release_by_catalog(catalog):
-    release = Release.objects.get(catalog=catalog)
-    return release
+def get_release_by_catalog(catalog: str) -> Release | None:
+    try:
+        release = Release.objects.get(catalog__iexact=catalog)
+        return release
+    except Release.DoesNotExist:
+        return None
