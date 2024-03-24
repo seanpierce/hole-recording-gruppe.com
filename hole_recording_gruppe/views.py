@@ -1,5 +1,5 @@
 
-from django.shortcuts import render 
+from django.shortcuts import redirect, render 
 
 from releases.services import get_releases, get_release_by_catalog
 
@@ -16,9 +16,20 @@ def index(request):
 def release(request, catalog):
     release = get_release_by_catalog(catalog)
 
+    if not release:
+        return redirect(not_found)
+
     context = {
         'title': release,
         'release': release
     }
 
     return render(request, 'release.html', context)
+
+
+def not_found(request):
+    context = {
+        'title': 'hole recording gruppe | 404'
+    }
+
+    return render(request, '404.html', context)
