@@ -20,6 +20,7 @@ class Release(models.Model):
 		return f'{self.catalog} - {self.artist}, {self.title}'
 	
 	
-class ReleaseImage(models.Model):
-    image = models.ImageField(upload_to='uploads/releases/')
-    release = models.ForeignKey(Release, on_delete=models.CASCADE)
+class Image(models.Model):
+	image = models.ImageField(upload_to='uploads/releases/')
+	alt_text = models.CharField(max_length=255, null=True, blank=True)
+	release = models.ForeignKey(Release, on_delete=models.CASCADE)

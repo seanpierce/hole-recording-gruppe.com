@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Release, ReleaseImage
+from .models import Release, Image
 
 
 class ReleaseImageInline(admin.StackedInline):
-    model = ReleaseImage
+    model = Image
     max_num=10
     extra=0
 

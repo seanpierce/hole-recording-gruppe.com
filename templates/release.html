@@ -18,8 +18,11 @@
         <div id="release-images">
             <img class="selected loading" alt="">
 
-            {% for image in release.releaseimage_set.all %}
-                <img class="release-image" src="{{ image.image.url }}" alt="">
+            {% for i in release.image_set.all %}
+                <img class="release-image" 
+                    src="{{ i.image.url }}" 
+                    alt="{{ i.alt_text }}"
+                    title="{{ i.alt_text }}">
             {% endfor %}
         </div>
 
