@@ -1,7 +1,7 @@
 from django.db import models
 from django_ckeditor_5.fields import CKEditor5Field
 
-# Create your models here.
+
 class Release(models.Model):
 	id = models.AutoField(primary_key=True)
 	created_at = models.DateTimeField(auto_now=True)
