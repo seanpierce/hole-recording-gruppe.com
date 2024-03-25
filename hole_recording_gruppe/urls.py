@@ -24,8 +24,9 @@ from hole_recording_gruppe import settings, views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+    path('404', views.not_found, name='404'),
     path('releases/<str:catalog>', views.release, name='release'),
-     path('ckeditor5/', include('django_ckeditor_5.urls'))
+    path('ckeditor5/', include('django_ckeditor_5.urls'))
 ]
 
 urlpatterns += [

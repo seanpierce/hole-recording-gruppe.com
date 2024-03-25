@@ -17,7 +17,7 @@ def release(request, catalog):
     release = get_release_by_catalog(catalog)
 
     if not release:
-        return redirect(not_found)
+        return redirect("/404")
 
     context = {
         'title': release,
