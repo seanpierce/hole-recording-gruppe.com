@@ -79,12 +79,27 @@ a {
             display: block;
         }
 
-        img {
+        #release-images {
             width: 58%;
 
             @media (max-width: $break-point) {
                 display: block;
                 width: 100%;
+            }
+
+            img {
+                display: inline-block;
+                max-height: 100px;
+                cursor: pointer;
+
+                &.selected {
+                    display: block;
+                    max-width: none;
+                    max-height: none;
+                    width: 100%;
+                    margin-bottom: 16px;
+                    cursor: inherit;
+                }
             }
         }
 
