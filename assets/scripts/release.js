@@ -1,21 +1,34 @@
 const images = [...document.getElementsByClassName('release-image')];
 
-const imageClickEvent = event => {
-    const clickedImage = event.target;
-    const isSelected = [...image.classList].includes('selected');
+console.log(images)
 
-    if (isSelected) return;
+const hasImages = images.length > 0;
 
-    const selectedImage = document.querySelector('img.selected');
-    const selectedImageData = {  ...selectedImage };
-    const clickedImageData = { ...clickedImage };
+if (hasImages) {
+    const loadingImage = document.querySelector('img.loading');
+    const firstImage = images[0];
 
-    selectedImage.src = clickedImageData.src;
-    selectedImage.ref = clickedImageData.ref;
-    clickedImage.src = selectedImageData.src;
-    clickedImage.ref = selectedImageData.ref;
+    console.log(firstImage)
+
+    // set initial image
+    loadingImage.src = firstImage.src;
+    loadingImage.ref = firstImage.ref;
+    loadingImage.classList.remove('loading');
+
+    // create click event
+    const imageClickEvent = event => {
+        const image = event.target;
+        const isSelected = [...image.classList].includes('selected');
+    
+        if (isSelected) return;
+    
+        const selectedImage = document.querySelector('img.selected');   
+        selectedImage.src = image.src;
+        selectedImage.ref = image.ref;
+    }
+    
+    // assign event to images
+    images.forEach(image => {
+        image.addEventListener('click', imageClickEvent)
+    });
 }
-
-images.forEach(image => {
-    image.addEventListener('click', imageClickEvent)
-});
