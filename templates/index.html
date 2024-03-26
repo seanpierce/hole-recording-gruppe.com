@@ -1,11 +1,9 @@
 {% extends 'layouts/_layout.html' %}
 
 {% block content %}
-<div id="content">
     {% for release in releases %}
-    <a href="/releases/{{ release.catalog }}">
-        <h1>{{ release }}</h1>
-    </a>
+        <a href="/releases/{{ release.catalog }}">
+            <h1>{% if release.release_date > today %}[UPCOMING] {% endif %}{{ release }}</h1>
+        </a>
     {% endfor %}
-</div>
 {% endblock %}

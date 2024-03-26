@@ -9,7 +9,7 @@ class Release(models.Model):
 	title = models.CharField(max_length=255)
 	catalog = models.CharField(max_length=12)
 	info = CKEditor5Field('Text', config_name='extends')
-	bandcamp_embed = models.TextField()
+	bandcamp_embed = models.TextField(null=True, blank=True)
 	active = models.BooleanField(default=True)
 	release_date = models.DateField()
 

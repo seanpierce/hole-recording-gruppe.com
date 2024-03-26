@@ -1,7 +1,7 @@
 from .models import Release
 
 def get_releases():
-    releases = Release.objects.all()
+    releases = Release.objects.filter(active=True)
     return releases
 
 
