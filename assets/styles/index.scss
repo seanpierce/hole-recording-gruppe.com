@@ -1,5 +1,6 @@
 $maize: white; //#FCE762;
 $dark-grey: #333;
+$light-grey: #777;
 $break-point: 770px;
 
 html {
@@ -56,6 +57,10 @@ a {
 
     h1 {
         color: $dark-grey;
+
+        &.upcoming {
+            color: $light-grey;
+        }
     }
 
     #footer {

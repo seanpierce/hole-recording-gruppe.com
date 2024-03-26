@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ meta_description | striptags }}">
+
+    <!-- Schema.org markup for Google -->
+    <meta itemprop="name" content="{{ title }}">
+    <meta itemprop="description" content="{{ meta_description | striptags }}">
+    <meta itemprop="image" content="{{ meta_image }}">
+    
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="{{ meta_image }}">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ meta_description | striptags }}">
+    <meta name="twitter:image:src" content="{{ meta_image }}">
+    
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:type" content="music.musician" />
+    <meta property="og:url" content="{{ meta_url }}" />
+    <meta property="og:image" content="{{ meta_image }}" />
+    <meta property="og:description" content="{{ meta_description | striptags }}" />
+    <meta property="og:site_name" content="Hole Recording Gruppe" />
+
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{% static 'styles/index.css' %}" />
     <link rel="icon" href="{% static 'images/tagger.png' %}" />
