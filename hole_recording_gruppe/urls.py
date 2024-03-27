@@ -25,13 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('404', views.not_found, name='404'),
-    path('releases/<str:catalog>', views.release, name='release'),
-    path('ckeditor5/', include('django_ckeditor_5.urls'))
+    path('releases/<str:catalog>', views.release, name='release')
 ]
-
-urlpatterns += [
-    path("ckeditor5/", include('django_ckeditor_5.urls'), name="ck_editor_5_upload_file"),
-] + static(settings.UPLOADS_URL, document_root=settings.UPLOADS_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

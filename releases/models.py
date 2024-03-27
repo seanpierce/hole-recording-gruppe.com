@@ -1,5 +1,5 @@
 from django.db import models
-from django_ckeditor_5.fields import CKEditor5Field
+from ckeditor.fields import RichTextField
 
 
 class Release(models.Model):
@@ -8,7 +8,7 @@ class Release(models.Model):
 	artist = models.CharField(max_length=255)
 	title = models.CharField(max_length=255)
 	catalog = models.CharField(max_length=12)
-	info = CKEditor5Field('Text', config_name='extends')
+	info = RichTextField()
 	bandcamp_embed = models.TextField(null=True, blank=True)
 	active = models.BooleanField(default=True)
 	release_date = models.DateField()
