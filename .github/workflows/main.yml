@@ -1,0 +1,29 @@
+name: remote ssh command
+
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@dce9d565de8d876c11d93fa4fe677c0285a66d78
+        with:
+          host: hole-recording-gruppe.com
+          username: ${{ secrets.SSH_SERVER_AGENT_USER }}
+          password: ${{ secrets.SSH_SERVER_AGENT_PASSWORD }}
+          port: 22
+          script: |
+            cd /home/seanpierce/www/hole-recording-gruppe.com
+            git pull origin master
+            source venv/bin/activate
+            pip install --upgrade pip
+            pip install -r ./requirements.txt
+            python manage.py migrate
+            python manage.py collectstatic --noinput
+            npm run build-sass
+            echo "${{ secrets.SSH_SERVER_AGENT_PASSWORD }}" | sudo -S systemctl restart hole-recording-gruppe.gunicorn
+            echo "${{ secrets.SSH_SERVER_AGENT_PASSWORD }}" | sudo -S systemctl restart nginx
