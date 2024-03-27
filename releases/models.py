@@ -12,6 +12,7 @@ class Release(models.Model):
 	bandcamp_embed = models.TextField(null=True, blank=True)
 	active = models.BooleanField(default=True)
 	release_date = models.DateField()
+	preorder_date = models.DateField(null=True)
 
 	class Meta:
 		ordering = ['-id',]

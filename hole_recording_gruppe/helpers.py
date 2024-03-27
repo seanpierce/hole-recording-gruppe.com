@@ -33,7 +33,7 @@ def get_meta_image(release: Release | None, host: str) -> str:
         if release is None:
             return generic_image_path
         else:
-            return f'{host}/{release.image_set.first.url}'
+            return f'{host}/{release.image_set.first().image.url}'
     except:
         return generic_image_path
 
