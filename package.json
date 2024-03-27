@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-sass": "sass --watch assets/styles/index.scss:assets/styles/index.css --style compressed"
+    "build-sass": "sass assets/styles/index.scss:assets/styles/index.css --style compressed",
+    "watch-sass": "sass --watch assets/styles/index.scss:assets/styles/index.css --style compressed"
   },
   "author": "",
   "license": "ISC",
