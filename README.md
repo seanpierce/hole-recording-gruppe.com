@@ -6,7 +6,7 @@ Hole Recording Gruppe is a record label operating in Portland, Oregon, USA.
 
 * Python3.10
 * Virtualenv
-* Django 5.0.3
+* Django 3.1.1
 * Node 16.14.0
 
 
