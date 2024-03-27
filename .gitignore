@@ -7,3 +7,5 @@ uploads
 package-lock.json
 node_modules
 .env
+assets/styles/*.css
+assets/styles/*.css.map
