@@ -2,7 +2,7 @@
 
 {% block content %}
     {% for release in releases %}
-        {% if release.release_date < today %}
+        {% if release.active %}
             <a href="/releases/{{ release.catalog }}">
                 <h1>{{ release }}</h1>
             </a>
@@ -10,8 +10,8 @@
     {% endfor %}
 
     {% for release in releases|dictsort:"id" %}
-        {% if release.release_date > today %}
-            <h1 class="upcoming">[UPCOMING] {{ release }}</h1>
+        {% if not release.active %}
+            <h1 class="not-active">[UPCOMING] {{ release }}</h1>
         {% endif %}
     {% endfor %}
 {% endblock %}

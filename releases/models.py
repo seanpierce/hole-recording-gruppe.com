@@ -10,8 +10,10 @@ class Release(models.Model):
 	catalog = models.CharField(max_length=12)
 	info = RichTextField()
 	bandcamp_embed = models.TextField(null=True, blank=True)
-	active = models.BooleanField(default=True)
-	release_date = models.DateField()
+	link_to_purchase = models.URLField(null=True, blank=True)
+	active = models.BooleanField(default=False)
+	published = models.BooleanField(default=False)
+	release_date = models.DateField(null=True, blank=True)
 	preorder_date = models.DateField(null=True, blank=True)
 
 	class Meta:

@@ -7,12 +7,18 @@
 <div id="release">
     <h1>{{ release }}</h1>
     <div>
-        <strong>Release Date: {{ release.release_date }}</strong>
+        <strong>Released {{ release.release_date }}</strong>
     </div>
 
     <div class="content">
         {{ release.info | safe }}
     </div>
+
+    {% if release.link_to_purchase is not None %}
+        <div class="link-to-purchase">
+            <a href="{{ release.link_to_purchase }}">Buy {{ release.catalog }}</a>
+        </div>
+    {% endif %}
 
     <div class="media">
         <div id="release-images">

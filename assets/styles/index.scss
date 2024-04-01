@@ -58,7 +58,7 @@ a {
     h1 {
         color: $dark-grey;
 
-        &.upcoming {
+        &.not-active {
             color: $light-grey;
         }
     }
@@ -121,6 +121,17 @@ a {
                 margin-top: 24px;
             }
         }
+    }
+
+    .link-to-purchase {
+        a {
+            border: solid 1px $dark-grey;
+            padding: 12px 18px;
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        margin-bottom: 48px;
     }
 
     .content {
