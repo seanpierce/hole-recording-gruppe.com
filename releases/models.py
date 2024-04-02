@@ -14,7 +14,6 @@ class Release(models.Model):
 	active = models.BooleanField(default=False)
 	published = models.BooleanField(default=False)
 	release_date = models.DateField(null=True, blank=True)
-	preorder_date = models.DateField(null=True, blank=True)
 
 	class Meta:
 		ordering = ['-id',]

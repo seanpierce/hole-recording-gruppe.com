@@ -71,6 +71,13 @@ a {
         #tape {
             width: 100%;
         }
+
+        #arrow {
+            max-height: 100px;
+            transform: scaleX(-1);
+            margin-left: 50px;
+            margin-bottom: 24px;
+        }
     }
 }
 
