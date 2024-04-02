@@ -18,12 +18,14 @@ jobs:
           port: 22
           script: |
             cd /home/seanpierce/www/hole-recording-gruppe.com
+            git reset --hard origin/master
             git pull origin master
             source venv/bin/activate
             pip install --upgrade pip
             pip install -r ./requirements.txt
             python manage.py migrate
-            python manage.py collectstatic --noinput
+            nvm use 16.14.0
             npm run build-sass
+            python manage.py collectstatic --noinput
             echo "${{ secrets.SSH_SERVER_AGENT_PASSWORD }}" | sudo -S systemctl restart hole-recording-gruppe.gunicorn
             echo "${{ secrets.SSH_SERVER_AGENT_PASSWORD }}" | sudo -S systemctl restart nginx
