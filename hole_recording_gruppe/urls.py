@@ -25,7 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('404', views.not_found, name='404'),
-    path('releases/<str:catalog>', views.release, name='release')
+    path('releases/<str:catalog>', views.release, name='release'),
+    path('download', views.bandcamp_download, name='download')
 ]
 
 if settings.DEBUG:

@@ -40,3 +40,7 @@ def not_found(request):
     }
 
     return render(request, '404.html', context)
+
+
+def bandcamp_download(request):
+    return redirect("https://hole-recording-gruppe.bandcamp.com/yum")
