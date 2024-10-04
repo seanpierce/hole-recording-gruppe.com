@@ -32,6 +32,14 @@ def release(request, catalog):
     return render(request, 'release.html', context)
 
 
+def subscribe(request):
+    context = {
+        **scaffold_page_content(None, request.build_absolute_uri('/')),
+        'title': 'hole recording gruppe',
+    }
+    return render(request, 'subscribe.html', context)
+
+
 def not_found(request):
     context = {
         **scaffold_page_content(None, request.build_absolute_uri('/')),
