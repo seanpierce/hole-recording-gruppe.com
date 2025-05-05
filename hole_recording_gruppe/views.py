@@ -40,6 +40,11 @@ def subscribe(request):
     return render(request, 'subscribe.html', context)
 
 
+def redirect_fme_video(request):
+    response = redirect('https://www.youtube.com/watch?v=kWcZkrVzpjs')
+    return response
+
+
 def not_found(request):
     context = {
         **scaffold_page_content(None, request.build_absolute_uri('/')),

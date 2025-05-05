@@ -26,7 +26,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('404', views.not_found, name='404'),
     path('releases/<str:catalog>', views.release, name='release'),
-    path('download', views.bandcamp_download, name='download')
+    path('download', views.bandcamp_download, name='download'),
+    path('fme-video', views.redirect_fme_video, name="fme-video")
 ]
 
 if settings.DEBUG:
