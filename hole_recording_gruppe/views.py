@@ -41,7 +41,7 @@ def subscribe(request):
 
 
 def redirect_fme_video(request):
-    response = redirect('https://www.youtube.com/watch?v=kWcZkrVzpjs')
+    response = redirect('https://www.youtube.com/watch?v=zFPj-MX-ndk')
     return response
 
 
