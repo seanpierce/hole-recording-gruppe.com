@@ -1,19 +1,19 @@
 {% extends 'layouts/_layout.html' %}
 
 {% block content %}
+    <!-- upcoming releases -->
+    {% for release in releases|dictsort:"id" %}
+        {% if not release.active %}
+            <h1 class="not-active">[UPCOMING] {{ release }}</h1>
+        {% endif %}
+    {% endfor %}
+    
     <!-- active releases -->
     {% for release in releases %}
         {% if release.active %}
             <a href="/releases/{{ release.catalog }}">
                 <h1>{{ release }}</h1>
             </a>
-        {% endif %}
-    {% endfor %}
-
-    <!-- upcoming releases -->
-    {% for release in releases|dictsort:"id" %}
-        {% if not release.active %}
-            <h1 class="not-active">[UPCOMING] {{ release }}</h1>
         {% endif %}
     {% endfor %}
 {% endblock %}
