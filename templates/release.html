@@ -16,7 +16,11 @@
 
     {% if release.link_to_purchase is not None %}
         <div class="link-to-purchase">
-            <a href="{{ release.link_to_purchase }}">Buy {{ release.catalog }}</a>
+            {% if release.in_preorder is True %}
+                <a href="{{ release.link_to_purchase }}">Preorder {{ release.catalog }}</a>
+            {% else %}
+                <a href="{{ release.link_to_purchase }}">Buy {{ release.catalog }}</a>
+            {% endif %}
         </div>
     {% endif %}
 

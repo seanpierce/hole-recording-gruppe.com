@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from ckeditor.fields import RichTextField
 
 
@@ -20,6 +21,9 @@ class Release(models.Model):
 
 	def __str__(self):
 		return f'{self.catalog} - {self.artist}, {self.title}'
+	
+	def in_preorder(self):
+		return timezone.now().date() < self.release_date
 	
 	
 class Image(models.Model):
