@@ -16,7 +16,7 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path, re_path
 from django.conf.urls.static import static
 
 from hole_recording_gruppe import settings, views
@@ -27,7 +27,8 @@ urlpatterns = [
     path('404', views.not_found, name='404'),
     path('releases/<str:catalog>', views.release, name='release'),
     path('download', views.bandcamp_download, name='download'),
-    path('fme-video', views.redirect_fme_video, name="fme-video")
+    path('fme-video', views.redirect_fme_video, name="fme-video"),
+    re_path(r"^uploads/(?P<filepath>.+)$", views.serve_upload),
 ]
 
 if settings.DEBUG:

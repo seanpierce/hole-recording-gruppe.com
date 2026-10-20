@@ -1,9 +1,13 @@
-
 from datetime import date
+from pathlib import Path
+
+from django.conf import settings
+from django.http import FileResponse, Http404
 from django.shortcuts import redirect, render 
 
 from hole_recording_gruppe.helpers import scaffold_page_content
 from releases.services import get_releases, get_release_by_catalog
+
 
  
 def index(request):
@@ -57,3 +61,13 @@ def not_found(request):
 
 def bandcamp_download(request):
     return redirect("https://hole-recording-gruppe.bandcamp.com/yum")
+
+
+def serve_upload(request, filepath):
+    root = Path(settings.UPLOADS_ROOT).resolve()
+    target = (root / filepath).resolve()
+
+    if not target.is_relative_to(root) or not target.is_file():
+        raise Http404()
+
+    return FileResponse(open(target, "rb"))
