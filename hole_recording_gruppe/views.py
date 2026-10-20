@@ -1,4 +1,5 @@
 from datetime import date
+import mimetypes
 from pathlib import Path
 
 from django.conf import settings
@@ -71,3 +72,18 @@ def serve_upload(request, filepath):
         raise Http404()
 
     return FileResponse(open(target, "rb"))
+
+
+def serve_static(request, filepath):
+    root = Path(settings.BASE_DIR, "assets").resolve()
+    target = (root / filepath).resolve()
+
+    if not target.is_relative_to(root) or not target.is_file():
+        raise Http404()
+
+    content_type, _ = mimetypes.guess_type(target.name)
+
+    return FileResponse(
+        open(target, "rb"),
+        content_type=content_type or "application/octet-stream",
+    )
