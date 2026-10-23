@@ -1,5 +1,5 @@
 :root {
-    --maize: white; /* #FCE762 */
+    --bg-color: #ffffff;
     --dark-grey: #333;
     --light-grey: #777;
     --break-point: 770px;
@@ -16,7 +16,7 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: var(--maize);
+    background-color: var(--bg-color);
 }
 
 a {
